@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (
@@ -42,7 +42,7 @@ func NewDeploymentPlan(scope constructs.Construct, id *string, props *Deployment
 	j := jsiiProxy_DeploymentPlan{}
 
 	_jsii_.Create(
-		"attini-cdk-lib.DeploymentPlan",
+		"@attini/cdk.DeploymentPlan",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -54,7 +54,7 @@ func NewDeploymentPlan_Override(d DeploymentPlan, scope constructs.Construct, id
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"attini-cdk-lib.DeploymentPlan",
+		"@attini/cdk.DeploymentPlan",
 		[]interface{}{scope, id, props},
 		d,
 	)
@@ -73,7 +73,7 @@ func DeploymentPlan_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.DeploymentPlan",
+		"@attini/cdk.DeploymentPlan",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,

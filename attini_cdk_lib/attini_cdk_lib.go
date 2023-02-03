@@ -8,7 +8,7 @@ import (
 
 func init() {
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniCfn",
+		"@attini/cdk.AttiniCfn",
 		reflect.TypeOf((*AttiniCfn)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
@@ -20,6 +20,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "iteration", GoGetter: "Iteration"},
@@ -49,16 +50,16 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_AttiniCfn{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniState)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniTask)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.AttiniCfnProps",
+		"@attini/cdk.AttiniCfnProps",
 		reflect.TypeOf((*AttiniCfnProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniImport",
+		"@attini/cdk.AttiniImport",
 		reflect.TypeOf((*AttiniImport)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
@@ -70,6 +71,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "iteration", GoGetter: "Iteration"},
@@ -99,16 +101,16 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_AttiniImport{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniState)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniTask)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.AttiniImportProps",
+		"@attini/cdk.AttiniImportProps",
 		reflect.TypeOf((*AttiniImportProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniLambdaInvoke",
+		"@attini/cdk.AttiniLambdaInvoke",
 		reflect.TypeOf((*AttiniLambdaInvoke)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
@@ -154,11 +156,11 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.AttiniLambdaInvokeProps",
+		"@attini/cdk.AttiniLambdaInvokeProps",
 		reflect.TypeOf((*AttiniLambdaInvokeProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniManualApproval",
+		"@attini/cdk.AttiniManualApproval",
 		reflect.TypeOf((*AttiniManualApproval)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
@@ -170,6 +172,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "iteration", GoGetter: "Iteration"},
@@ -199,12 +202,12 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_AttiniManualApproval{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniState)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniTask)
 			return &j
 		},
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniMerge",
+		"@attini/cdk.AttiniMerge",
 		reflect.TypeOf((*AttiniMerge)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
@@ -250,7 +253,7 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniRunner",
+		"@attini/cdk.AttiniRunner",
 		reflect.TypeOf((*AttiniRunner)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
@@ -264,7 +267,7 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniRunnerJob",
+		"@attini/cdk.AttiniRunnerJob",
 		reflect.TypeOf((*AttiniRunnerJob)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
@@ -276,6 +279,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "iteration", GoGetter: "Iteration"},
@@ -305,20 +309,20 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_AttiniRunnerJob{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniState)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniTask)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.AttiniRunnerJobProps",
+		"@attini/cdk.AttiniRunnerJobProps",
 		reflect.TypeOf((*AttiniRunnerJobProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.AttiniRunnerProps",
+		"@attini/cdk.AttiniRunnerProps",
 		reflect.TypeOf((*AttiniRunnerProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniSam",
+		"@attini/cdk.AttiniSam",
 		reflect.TypeOf((*AttiniSam)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
@@ -330,6 +334,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "iteration", GoGetter: "Iteration"},
@@ -359,16 +364,16 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_AttiniSam{}
-			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniState)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniTask)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.AttiniSamProps",
+		"@attini/cdk.AttiniSamProps",
 		reflect.TypeOf((*AttiniSamProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.AttiniState",
+		"@attini/cdk.AttiniState",
 		reflect.TypeOf((*AttiniState)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
@@ -415,12 +420,59 @@ func init() {
 			return &j
 		},
 	)
+	_jsii_.RegisterClass(
+		"@attini/cdk.AttiniTask",
+		reflect.TypeOf((*AttiniTask)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addBranch", GoMethod: "AddBranch"},
+			_jsii_.MemberMethod{JsiiMethod: "addChoice", GoMethod: "AddChoice"},
+			_jsii_.MemberMethod{JsiiMethod: "addIterator", GoMethod: "AddIterator"},
+			_jsii_.MemberMethod{JsiiMethod: "addPrefix", GoMethod: "AddPrefix"},
+			_jsii_.MemberMethod{JsiiMethod: "bindToGraph", GoMethod: "BindToGraph"},
+			_jsii_.MemberProperty{JsiiProperty: "branches", GoGetter: "Branches"},
+			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
+			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
+			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
+			_jsii_.MemberProperty{JsiiProperty: "iteration", GoGetter: "Iteration"},
+			_jsii_.MemberMethod{JsiiMethod: "makeDefault", GoMethod: "MakeDefault"},
+			_jsii_.MemberMethod{JsiiMethod: "makeNext", GoMethod: "MakeNext"},
+			_jsii_.MemberMethod{JsiiMethod: "next", GoMethod: "Next"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "outputPath", GoGetter: "OutputPath"},
+			_jsii_.MemberProperty{JsiiProperty: "parameters", GoGetter: "Parameters"},
+			_jsii_.MemberMethod{JsiiMethod: "renderBranches", GoMethod: "RenderBranches"},
+			_jsii_.MemberMethod{JsiiMethod: "renderChoices", GoMethod: "RenderChoices"},
+			_jsii_.MemberMethod{JsiiMethod: "renderInputOutput", GoMethod: "RenderInputOutput"},
+			_jsii_.MemberMethod{JsiiMethod: "renderIterator", GoMethod: "RenderIterator"},
+			_jsii_.MemberMethod{JsiiMethod: "renderNextEnd", GoMethod: "RenderNextEnd"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProps", GoMethod: "RenderProps"},
+			_jsii_.MemberMethod{JsiiMethod: "renderResultSelector", GoMethod: "RenderResultSelector"},
+			_jsii_.MemberMethod{JsiiMethod: "renderRetryCatch", GoMethod: "RenderRetryCatch"},
+			_jsii_.MemberProperty{JsiiProperty: "resultPath", GoGetter: "ResultPath"},
+			_jsii_.MemberProperty{JsiiProperty: "resultSelector", GoGetter: "ResultSelector"},
+			_jsii_.MemberProperty{JsiiProperty: "startState", GoGetter: "StartState"},
+			_jsii_.MemberProperty{JsiiProperty: "stateId", GoGetter: "StateId"},
+			_jsii_.MemberMethod{JsiiMethod: "toStateJson", GoMethod: "ToStateJson"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+			_jsii_.MemberMethod{JsiiMethod: "validateState", GoMethod: "ValidateState"},
+			_jsii_.MemberMethod{JsiiMethod: "whenBoundToGraph", GoMethod: "WhenBoundToGraph"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AttiniTask{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_AttiniState)
+			return &j
+		},
+	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.AwsVpcConfiguration",
+		"@attini/cdk.AwsVpcConfiguration",
 		reflect.TypeOf((*AwsVpcConfiguration)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.DeploymentPlan",
+		"@attini/cdk.DeploymentPlan",
 		reflect.TypeOf((*DeploymentPlan)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
@@ -433,11 +485,11 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.DeploymentPlanProps",
+		"@attini/cdk.DeploymentPlanProps",
 		reflect.TypeOf((*DeploymentPlanProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.DeploymentPlanStack",
+		"@attini/cdk.DeploymentPlanStack",
 		reflect.TypeOf((*DeploymentPlanStack)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "account", GoGetter: "Account"},
@@ -480,15 +532,15 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.DistributionSource",
+		"@attini/cdk.DistributionSource",
 		reflect.TypeOf((*DistributionSource)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.Project",
+		"@attini/cdk.Project",
 		reflect.TypeOf((*Project)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"attini-cdk-lib.PropsUtil",
+		"@attini/cdk.PropsUtil",
 		reflect.TypeOf((*PropsUtil)(nil)).Elem(),
 		nil, // no members
 		func() interface{} {
@@ -496,15 +548,15 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.RunnerConfiguration",
+		"@attini/cdk.RunnerConfiguration",
 		reflect.TypeOf((*RunnerConfiguration)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.S3Source",
+		"@attini/cdk.S3Source",
 		reflect.TypeOf((*S3Source)(nil)).Elem(),
 	)
 	_jsii_.RegisterEnum(
-		"attini-cdk-lib.SourceType",
+		"@attini/cdk.SourceType",
 		reflect.TypeOf((*SourceType)(nil)).Elem(),
 		map[string]interface{}{
 			"S3_SOURCE": SourceType_S3_SOURCE,
@@ -512,7 +564,7 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
-		"attini-cdk-lib.Startup",
+		"@attini/cdk.Startup",
 		reflect.TypeOf((*Startup)(nil)).Elem(),
 	)
 }

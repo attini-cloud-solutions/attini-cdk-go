@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (
@@ -10,7 +10,7 @@ import (
 )
 
 type AttiniManualApproval interface {
-	AttiniState
+	AttiniTask
 	Branches() *[]awsstepfunctions.StateGraph
 	Comment() *string
 	DefaultChoice() awsstepfunctions.State
@@ -47,6 +47,12 @@ type AttiniManualApproval interface {
 	// Don't call this. It will be called automatically when you work
 	// with states normally.
 	BindToGraph(graph awsstepfunctions.StateGraph)
+	// Get the json path to this steps output.
+	//
+	// Convenience
+	// method that will return a string with the following format
+	// $.output.<id>.<path>.
+	GetOutputPath(path *string) *string
 	// Make the indicated state the default choice transition of this state.
 	MakeDefault(def awsstepfunctions.State)
 	// Make the indicated state the default transition of this state.
@@ -82,7 +88,7 @@ type AttiniManualApproval interface {
 
 // The jsii proxy struct for AttiniManualApproval
 type jsiiProxy_AttiniManualApproval struct {
-	jsiiProxy_AttiniState
+	jsiiProxy_AttiniTask
 }
 
 func (j *jsiiProxy_AttiniManualApproval) Branches() *[]awsstepfunctions.StateGraph {
@@ -245,7 +251,7 @@ func NewAttiniManualApproval(scope constructs.Construct, id *string) AttiniManua
 	j := jsiiProxy_AttiniManualApproval{}
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniManualApproval",
+		"@attini/cdk.AttiniManualApproval",
 		[]interface{}{scope, id},
 		&j,
 	)
@@ -257,7 +263,7 @@ func NewAttiniManualApproval_Override(a AttiniManualApproval, scope constructs.C
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniManualApproval",
+		"@attini/cdk.AttiniManualApproval",
 		[]interface{}{scope, id},
 		a,
 	)
@@ -300,7 +306,7 @@ func AttiniManualApproval_FilterNextables(states *[]awsstepfunctions.State) *[]a
 	var returns *[]awsstepfunctions.INextable
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniManualApproval",
+		"@attini/cdk.AttiniManualApproval",
 		"filterNextables",
 		[]interface{}{states},
 		&returns,
@@ -319,7 +325,7 @@ func AttiniManualApproval_FindReachableEndStates(start awsstepfunctions.State, o
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniManualApproval",
+		"@attini/cdk.AttiniManualApproval",
 		"findReachableEndStates",
 		[]interface{}{start, options},
 		&returns,
@@ -340,7 +346,7 @@ func AttiniManualApproval_FindReachableStates(start awsstepfunctions.State, opti
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniManualApproval",
+		"@attini/cdk.AttiniManualApproval",
 		"findReachableStates",
 		[]interface{}{start, options},
 		&returns,
@@ -362,7 +368,7 @@ func AttiniManualApproval_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniManualApproval",
+		"@attini/cdk.AttiniManualApproval",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -379,7 +385,7 @@ func AttiniManualApproval_PrefixStates(root constructs.IConstruct, prefix *strin
 		panic(err)
 	}
 	_jsii_.StaticInvokeVoid(
-		"attini-cdk-lib.AttiniManualApproval",
+		"@attini/cdk.AttiniManualApproval",
 		"prefixStates",
 		[]interface{}{root, prefix},
 	)
@@ -438,6 +444,19 @@ func (a *jsiiProxy_AttiniManualApproval) BindToGraph(graph awsstepfunctions.Stat
 		"bindToGraph",
 		[]interface{}{graph},
 	)
+}
+
+func (a *jsiiProxy_AttiniManualApproval) GetOutputPath(path *string) *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		a,
+		"getOutputPath",
+		[]interface{}{path},
+		&returns,
+	)
+
+	return returns
 }
 
 func (a *jsiiProxy_AttiniManualApproval) MakeDefault(def awsstepfunctions.State) {

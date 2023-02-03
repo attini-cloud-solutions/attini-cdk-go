@@ -1,9 +1,9 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 
 type AwsVpcConfiguration struct {
-	AssignPublicIp *string `field:"optional" json:"assignPublicIp" yaml:"assignPublicIp"`
+	AssignPublicIp *bool `field:"optional" json:"assignPublicIp" yaml:"assignPublicIp"`
 	SecurityGroups *[]*string `field:"optional" json:"securityGroups" yaml:"securityGroups"`
 	Subnets *[]*string `field:"optional" json:"subnets" yaml:"subnets"`
 }

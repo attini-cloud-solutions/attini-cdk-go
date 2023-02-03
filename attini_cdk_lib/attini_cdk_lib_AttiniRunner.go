@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (
@@ -53,7 +53,7 @@ func NewAttiniRunner(scope constructs.Construct, id *string, props *AttiniRunner
 	j := jsiiProxy_AttiniRunner{}
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniRunner",
+		"@attini/cdk.AttiniRunner",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -65,7 +65,7 @@ func NewAttiniRunner_Override(a AttiniRunner, scope constructs.Construct, id *st
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniRunner",
+		"@attini/cdk.AttiniRunner",
 		[]interface{}{scope, id, props},
 		a,
 	)
@@ -84,7 +84,7 @@ func AttiniRunner_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniRunner",
+		"@attini/cdk.AttiniRunner",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,

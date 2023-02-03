@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-type AttiniMerge interface {
+type AttiniTask interface {
 	AttiniState
 	Branches() *[]awsstepfunctions.StateGraph
 	Comment() *string
@@ -47,6 +47,12 @@ type AttiniMerge interface {
 	// Don't call this. It will be called automatically when you work
 	// with states normally.
 	BindToGraph(graph awsstepfunctions.StateGraph)
+	// Get the json path to this steps output.
+	//
+	// Convenience
+	// method that will return a string with the following format
+	// $.output.<id>.<path>.
+	GetOutputPath(path *string) *string
 	// Make the indicated state the default choice transition of this state.
 	MakeDefault(def awsstepfunctions.State)
 	// Make the indicated state the default transition of this state.
@@ -80,12 +86,12 @@ type AttiniMerge interface {
 	WhenBoundToGraph(graph awsstepfunctions.StateGraph)
 }
 
-// The jsii proxy struct for AttiniMerge
-type jsiiProxy_AttiniMerge struct {
+// The jsii proxy struct for AttiniTask
+type jsiiProxy_AttiniTask struct {
 	jsiiProxy_AttiniState
 }
 
-func (j *jsiiProxy_AttiniMerge) Branches() *[]awsstepfunctions.StateGraph {
+func (j *jsiiProxy_AttiniTask) Branches() *[]awsstepfunctions.StateGraph {
 	var returns *[]awsstepfunctions.StateGraph
 	_jsii_.Get(
 		j,
@@ -95,7 +101,7 @@ func (j *jsiiProxy_AttiniMerge) Branches() *[]awsstepfunctions.StateGraph {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) Comment() *string {
+func (j *jsiiProxy_AttiniTask) Comment() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -105,7 +111,7 @@ func (j *jsiiProxy_AttiniMerge) Comment() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) DefaultChoice() awsstepfunctions.State {
+func (j *jsiiProxy_AttiniTask) DefaultChoice() awsstepfunctions.State {
 	var returns awsstepfunctions.State
 	_jsii_.Get(
 		j,
@@ -115,7 +121,7 @@ func (j *jsiiProxy_AttiniMerge) DefaultChoice() awsstepfunctions.State {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) EndStates() *[]awsstepfunctions.INextable {
+func (j *jsiiProxy_AttiniTask) EndStates() *[]awsstepfunctions.INextable {
 	var returns *[]awsstepfunctions.INextable
 	_jsii_.Get(
 		j,
@@ -125,7 +131,7 @@ func (j *jsiiProxy_AttiniMerge) EndStates() *[]awsstepfunctions.INextable {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) Id() *string {
+func (j *jsiiProxy_AttiniTask) Id() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -135,7 +141,7 @@ func (j *jsiiProxy_AttiniMerge) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) InputPath() *string {
+func (j *jsiiProxy_AttiniTask) InputPath() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -145,7 +151,7 @@ func (j *jsiiProxy_AttiniMerge) InputPath() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) Iteration() awsstepfunctions.StateGraph {
+func (j *jsiiProxy_AttiniTask) Iteration() awsstepfunctions.StateGraph {
 	var returns awsstepfunctions.StateGraph
 	_jsii_.Get(
 		j,
@@ -155,7 +161,7 @@ func (j *jsiiProxy_AttiniMerge) Iteration() awsstepfunctions.StateGraph {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) Node() constructs.Node {
+func (j *jsiiProxy_AttiniTask) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -165,7 +171,7 @@ func (j *jsiiProxy_AttiniMerge) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) OutputPath() *string {
+func (j *jsiiProxy_AttiniTask) OutputPath() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -175,7 +181,7 @@ func (j *jsiiProxy_AttiniMerge) OutputPath() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) Parameters() *map[string]interface{} {
+func (j *jsiiProxy_AttiniTask) Parameters() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -185,7 +191,7 @@ func (j *jsiiProxy_AttiniMerge) Parameters() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) ResultPath() *string {
+func (j *jsiiProxy_AttiniTask) ResultPath() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -195,7 +201,7 @@ func (j *jsiiProxy_AttiniMerge) ResultPath() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) ResultSelector() *map[string]interface{} {
+func (j *jsiiProxy_AttiniTask) ResultSelector() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -205,7 +211,7 @@ func (j *jsiiProxy_AttiniMerge) ResultSelector() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) StartState() awsstepfunctions.State {
+func (j *jsiiProxy_AttiniTask) StartState() awsstepfunctions.State {
 	var returns awsstepfunctions.State
 	_jsii_.Get(
 		j,
@@ -215,7 +221,7 @@ func (j *jsiiProxy_AttiniMerge) StartState() awsstepfunctions.State {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) StateId() *string {
+func (j *jsiiProxy_AttiniTask) StateId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -225,7 +231,7 @@ func (j *jsiiProxy_AttiniMerge) StateId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_AttiniMerge) Type() *string {
+func (j *jsiiProxy_AttiniTask) Type() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -236,34 +242,17 @@ func (j *jsiiProxy_AttiniMerge) Type() *string {
 }
 
 
-func NewAttiniMerge(scope constructs.Construct, id *string) AttiniMerge {
-	_init_.Initialize()
-
-	if err := validateNewAttiniMergeParameters(scope, id); err != nil {
-		panic(err)
-	}
-	j := jsiiProxy_AttiniMerge{}
-
-	_jsii_.Create(
-		"@attini/cdk.AttiniMerge",
-		[]interface{}{scope, id},
-		&j,
-	)
-
-	return &j
-}
-
-func NewAttiniMerge_Override(a AttiniMerge, scope constructs.Construct, id *string) {
+func NewAttiniTask_Override(a AttiniTask, scope constructs.Construct, id *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@attini/cdk.AttiniMerge",
+		"@attini/cdk.AttiniTask",
 		[]interface{}{scope, id},
 		a,
 	)
 }
 
-func (j *jsiiProxy_AttiniMerge)SetDefaultChoice(val awsstepfunctions.State) {
+func (j *jsiiProxy_AttiniTask)SetDefaultChoice(val awsstepfunctions.State) {
 	_jsii_.Set(
 		j,
 		"defaultChoice",
@@ -271,7 +260,7 @@ func (j *jsiiProxy_AttiniMerge)SetDefaultChoice(val awsstepfunctions.State) {
 	)
 }
 
-func (j *jsiiProxy_AttiniMerge)SetIteration(val awsstepfunctions.StateGraph) {
+func (j *jsiiProxy_AttiniTask)SetIteration(val awsstepfunctions.StateGraph) {
 	_jsii_.Set(
 		j,
 		"iteration",
@@ -279,7 +268,7 @@ func (j *jsiiProxy_AttiniMerge)SetIteration(val awsstepfunctions.StateGraph) {
 	)
 }
 
-func (j *jsiiProxy_AttiniMerge)SetType(val *string) {
+func (j *jsiiProxy_AttiniTask)SetType(val *string) {
 	if err := j.validateSetTypeParameters(val); err != nil {
 		panic(err)
 	}
@@ -291,16 +280,16 @@ func (j *jsiiProxy_AttiniMerge)SetType(val *string) {
 }
 
 // Return only the states that allow chaining from an array of states.
-func AttiniMerge_FilterNextables(states *[]awsstepfunctions.State) *[]awsstepfunctions.INextable {
+func AttiniTask_FilterNextables(states *[]awsstepfunctions.State) *[]awsstepfunctions.INextable {
 	_init_.Initialize()
 
-	if err := validateAttiniMerge_FilterNextablesParameters(states); err != nil {
+	if err := validateAttiniTask_FilterNextablesParameters(states); err != nil {
 		panic(err)
 	}
 	var returns *[]awsstepfunctions.INextable
 
 	_jsii_.StaticInvoke(
-		"@attini/cdk.AttiniMerge",
+		"@attini/cdk.AttiniTask",
 		"filterNextables",
 		[]interface{}{states},
 		&returns,
@@ -310,16 +299,16 @@ func AttiniMerge_FilterNextables(states *[]awsstepfunctions.State) *[]awsstepfun
 }
 
 // Find the set of end states states reachable through transitions from the given start state.
-func AttiniMerge_FindReachableEndStates(start awsstepfunctions.State, options *awsstepfunctions.FindStateOptions) *[]awsstepfunctions.State {
+func AttiniTask_FindReachableEndStates(start awsstepfunctions.State, options *awsstepfunctions.FindStateOptions) *[]awsstepfunctions.State {
 	_init_.Initialize()
 
-	if err := validateAttiniMerge_FindReachableEndStatesParameters(start, options); err != nil {
+	if err := validateAttiniTask_FindReachableEndStatesParameters(start, options); err != nil {
 		panic(err)
 	}
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"@attini/cdk.AttiniMerge",
+		"@attini/cdk.AttiniTask",
 		"findReachableEndStates",
 		[]interface{}{start, options},
 		&returns,
@@ -331,16 +320,16 @@ func AttiniMerge_FindReachableEndStates(start awsstepfunctions.State, options *a
 // Find the set of states reachable through transitions from the given start state.
 //
 // This does not retrieve states from within sub-graphs, such as states within a Parallel state's branch.
-func AttiniMerge_FindReachableStates(start awsstepfunctions.State, options *awsstepfunctions.FindStateOptions) *[]awsstepfunctions.State {
+func AttiniTask_FindReachableStates(start awsstepfunctions.State, options *awsstepfunctions.FindStateOptions) *[]awsstepfunctions.State {
 	_init_.Initialize()
 
-	if err := validateAttiniMerge_FindReachableStatesParameters(start, options); err != nil {
+	if err := validateAttiniTask_FindReachableStatesParameters(start, options); err != nil {
 		panic(err)
 	}
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"@attini/cdk.AttiniMerge",
+		"@attini/cdk.AttiniTask",
 		"findReachableStates",
 		[]interface{}{start, options},
 		&returns,
@@ -353,16 +342,16 @@ func AttiniMerge_FindReachableStates(start awsstepfunctions.State, options *awss
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Deprecated: use `x instanceof Construct` instead.
-func AttiniMerge_IsConstruct(x interface{}) *bool {
+func AttiniTask_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateAttiniMerge_IsConstructParameters(x); err != nil {
+	if err := validateAttiniTask_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@attini/cdk.AttiniMerge",
+		"@attini/cdk.AttiniTask",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -372,20 +361,20 @@ func AttiniMerge_IsConstruct(x interface{}) *bool {
 }
 
 // Add a prefix to the stateId of all States found in a construct tree.
-func AttiniMerge_PrefixStates(root constructs.IConstruct, prefix *string) {
+func AttiniTask_PrefixStates(root constructs.IConstruct, prefix *string) {
 	_init_.Initialize()
 
-	if err := validateAttiniMerge_PrefixStatesParameters(root, prefix); err != nil {
+	if err := validateAttiniTask_PrefixStatesParameters(root, prefix); err != nil {
 		panic(err)
 	}
 	_jsii_.StaticInvokeVoid(
-		"@attini/cdk.AttiniMerge",
+		"@attini/cdk.AttiniTask",
 		"prefixStates",
 		[]interface{}{root, prefix},
 	)
 }
 
-func (a *jsiiProxy_AttiniMerge) AddBranch(branch awsstepfunctions.StateGraph) {
+func (a *jsiiProxy_AttiniTask) AddBranch(branch awsstepfunctions.StateGraph) {
 	if err := a.validateAddBranchParameters(branch); err != nil {
 		panic(err)
 	}
@@ -396,7 +385,7 @@ func (a *jsiiProxy_AttiniMerge) AddBranch(branch awsstepfunctions.StateGraph) {
 	)
 }
 
-func (a *jsiiProxy_AttiniMerge) AddChoice(condition awsstepfunctions.Condition, next awsstepfunctions.State) {
+func (a *jsiiProxy_AttiniTask) AddChoice(condition awsstepfunctions.Condition, next awsstepfunctions.State) {
 	if err := a.validateAddChoiceParameters(condition, next); err != nil {
 		panic(err)
 	}
@@ -407,7 +396,7 @@ func (a *jsiiProxy_AttiniMerge) AddChoice(condition awsstepfunctions.Condition, 
 	)
 }
 
-func (a *jsiiProxy_AttiniMerge) AddIterator(iteration awsstepfunctions.StateGraph) {
+func (a *jsiiProxy_AttiniTask) AddIterator(iteration awsstepfunctions.StateGraph) {
 	if err := a.validateAddIteratorParameters(iteration); err != nil {
 		panic(err)
 	}
@@ -418,7 +407,7 @@ func (a *jsiiProxy_AttiniMerge) AddIterator(iteration awsstepfunctions.StateGrap
 	)
 }
 
-func (a *jsiiProxy_AttiniMerge) AddPrefix(x *string) {
+func (a *jsiiProxy_AttiniTask) AddPrefix(x *string) {
 	if err := a.validateAddPrefixParameters(x); err != nil {
 		panic(err)
 	}
@@ -429,7 +418,7 @@ func (a *jsiiProxy_AttiniMerge) AddPrefix(x *string) {
 	)
 }
 
-func (a *jsiiProxy_AttiniMerge) BindToGraph(graph awsstepfunctions.StateGraph) {
+func (a *jsiiProxy_AttiniTask) BindToGraph(graph awsstepfunctions.StateGraph) {
 	if err := a.validateBindToGraphParameters(graph); err != nil {
 		panic(err)
 	}
@@ -440,7 +429,20 @@ func (a *jsiiProxy_AttiniMerge) BindToGraph(graph awsstepfunctions.StateGraph) {
 	)
 }
 
-func (a *jsiiProxy_AttiniMerge) MakeDefault(def awsstepfunctions.State) {
+func (a *jsiiProxy_AttiniTask) GetOutputPath(path *string) *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		a,
+		"getOutputPath",
+		[]interface{}{path},
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AttiniTask) MakeDefault(def awsstepfunctions.State) {
 	if err := a.validateMakeDefaultParameters(def); err != nil {
 		panic(err)
 	}
@@ -451,7 +453,7 @@ func (a *jsiiProxy_AttiniMerge) MakeDefault(def awsstepfunctions.State) {
 	)
 }
 
-func (a *jsiiProxy_AttiniMerge) MakeNext(next awsstepfunctions.State) {
+func (a *jsiiProxy_AttiniTask) MakeNext(next awsstepfunctions.State) {
 	if err := a.validateMakeNextParameters(next); err != nil {
 		panic(err)
 	}
@@ -462,7 +464,7 @@ func (a *jsiiProxy_AttiniMerge) MakeNext(next awsstepfunctions.State) {
 	)
 }
 
-func (a *jsiiProxy_AttiniMerge) Next(next awsstepfunctions.IChainable) awsstepfunctions.Chain {
+func (a *jsiiProxy_AttiniTask) Next(next awsstepfunctions.IChainable) awsstepfunctions.Chain {
 	if err := a.validateNextParameters(next); err != nil {
 		panic(err)
 	}
@@ -478,7 +480,7 @@ func (a *jsiiProxy_AttiniMerge) Next(next awsstepfunctions.IChainable) awsstepfu
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) RenderBranches() interface{} {
+func (a *jsiiProxy_AttiniTask) RenderBranches() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
@@ -491,7 +493,7 @@ func (a *jsiiProxy_AttiniMerge) RenderBranches() interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) RenderChoices() interface{} {
+func (a *jsiiProxy_AttiniTask) RenderChoices() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
@@ -504,7 +506,7 @@ func (a *jsiiProxy_AttiniMerge) RenderChoices() interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) RenderInputOutput() interface{} {
+func (a *jsiiProxy_AttiniTask) RenderInputOutput() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
@@ -517,7 +519,7 @@ func (a *jsiiProxy_AttiniMerge) RenderInputOutput() interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) RenderIterator() interface{} {
+func (a *jsiiProxy_AttiniTask) RenderIterator() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
@@ -530,7 +532,7 @@ func (a *jsiiProxy_AttiniMerge) RenderIterator() interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) RenderNextEnd() interface{} {
+func (a *jsiiProxy_AttiniTask) RenderNextEnd() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
@@ -543,7 +545,7 @@ func (a *jsiiProxy_AttiniMerge) RenderNextEnd() interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) RenderProps() *map[string]interface{} {
+func (a *jsiiProxy_AttiniTask) RenderProps() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -556,7 +558,7 @@ func (a *jsiiProxy_AttiniMerge) RenderProps() *map[string]interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) RenderResultSelector() interface{} {
+func (a *jsiiProxy_AttiniTask) RenderResultSelector() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
@@ -569,7 +571,7 @@ func (a *jsiiProxy_AttiniMerge) RenderResultSelector() interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) RenderRetryCatch() interface{} {
+func (a *jsiiProxy_AttiniTask) RenderRetryCatch() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
@@ -582,7 +584,7 @@ func (a *jsiiProxy_AttiniMerge) RenderRetryCatch() interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) ToStateJson() *map[string]interface{} {
+func (a *jsiiProxy_AttiniTask) ToStateJson() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -595,7 +597,7 @@ func (a *jsiiProxy_AttiniMerge) ToStateJson() *map[string]interface{} {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) ToString() *string {
+func (a *jsiiProxy_AttiniTask) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
@@ -608,7 +610,7 @@ func (a *jsiiProxy_AttiniMerge) ToString() *string {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) ValidateState() *[]*string {
+func (a *jsiiProxy_AttiniTask) ValidateState() *[]*string {
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -621,7 +623,7 @@ func (a *jsiiProxy_AttiniMerge) ValidateState() *[]*string {
 	return returns
 }
 
-func (a *jsiiProxy_AttiniMerge) WhenBoundToGraph(graph awsstepfunctions.StateGraph) {
+func (a *jsiiProxy_AttiniTask) WhenBoundToGraph(graph awsstepfunctions.StateGraph) {
 	if err := a.validateWhenBoundToGraphParameters(graph); err != nil {
 		panic(err)
 	}

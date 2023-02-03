@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (

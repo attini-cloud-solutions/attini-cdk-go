@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (
@@ -245,7 +245,7 @@ func NewAttiniLambdaInvoke(scope constructs.Construct, id *string, props *Attini
 	j := jsiiProxy_AttiniLambdaInvoke{}
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniLambdaInvoke",
+		"@attini/cdk.AttiniLambdaInvoke",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -257,7 +257,7 @@ func NewAttiniLambdaInvoke_Override(a AttiniLambdaInvoke, scope constructs.Const
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniLambdaInvoke",
+		"@attini/cdk.AttiniLambdaInvoke",
 		[]interface{}{scope, id, props},
 		a,
 	)
@@ -300,7 +300,7 @@ func AttiniLambdaInvoke_FilterNextables(states *[]awsstepfunctions.State) *[]aws
 	var returns *[]awsstepfunctions.INextable
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniLambdaInvoke",
+		"@attini/cdk.AttiniLambdaInvoke",
 		"filterNextables",
 		[]interface{}{states},
 		&returns,
@@ -319,7 +319,7 @@ func AttiniLambdaInvoke_FindReachableEndStates(start awsstepfunctions.State, opt
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniLambdaInvoke",
+		"@attini/cdk.AttiniLambdaInvoke",
 		"findReachableEndStates",
 		[]interface{}{start, options},
 		&returns,
@@ -340,7 +340,7 @@ func AttiniLambdaInvoke_FindReachableStates(start awsstepfunctions.State, option
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniLambdaInvoke",
+		"@attini/cdk.AttiniLambdaInvoke",
 		"findReachableStates",
 		[]interface{}{start, options},
 		&returns,
@@ -362,7 +362,7 @@ func AttiniLambdaInvoke_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniLambdaInvoke",
+		"@attini/cdk.AttiniLambdaInvoke",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -379,7 +379,7 @@ func AttiniLambdaInvoke_PrefixStates(root constructs.IConstruct, prefix *string)
 		panic(err)
 	}
 	_jsii_.StaticInvokeVoid(
-		"attini-cdk-lib.AttiniLambdaInvoke",
+		"@attini/cdk.AttiniLambdaInvoke",
 		"prefixStates",
 		[]interface{}{root, prefix},
 	)

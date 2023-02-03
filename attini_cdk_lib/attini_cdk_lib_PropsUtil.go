@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (
@@ -20,7 +20,7 @@ func NewPropsUtil() PropsUtil {
 	j := jsiiProxy_PropsUtil{}
 
 	_jsii_.Create(
-		"attini-cdk-lib.PropsUtil",
+		"@attini/cdk.PropsUtil",
 		nil, // no parameters
 		&j,
 	)
@@ -32,7 +32,7 @@ func NewPropsUtil_Override(p PropsUtil) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"attini-cdk-lib.PropsUtil",
+		"@attini/cdk.PropsUtil",
 		nil, // no parameters
 		p,
 	)
@@ -47,7 +47,7 @@ func PropsUtil_FixCase(props interface{}) *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.PropsUtil",
+		"@attini/cdk.PropsUtil",
 		"fixCase",
 		[]interface{}{props},
 		&returns,

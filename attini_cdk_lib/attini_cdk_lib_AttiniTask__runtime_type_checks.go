@@ -12,7 +12,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-func (a *jsiiProxy_AttiniMerge) validateAddBranchParameters(branch awsstepfunctions.StateGraph) error {
+func (a *jsiiProxy_AttiniTask) validateAddBranchParameters(branch awsstepfunctions.StateGraph) error {
 	if branch == nil {
 		return fmt.Errorf("parameter branch is required, but nil was provided")
 	}
@@ -20,7 +20,7 @@ func (a *jsiiProxy_AttiniMerge) validateAddBranchParameters(branch awsstepfuncti
 	return nil
 }
 
-func (a *jsiiProxy_AttiniMerge) validateAddChoiceParameters(condition awsstepfunctions.Condition, next awsstepfunctions.State) error {
+func (a *jsiiProxy_AttiniTask) validateAddChoiceParameters(condition awsstepfunctions.Condition, next awsstepfunctions.State) error {
 	if condition == nil {
 		return fmt.Errorf("parameter condition is required, but nil was provided")
 	}
@@ -32,7 +32,7 @@ func (a *jsiiProxy_AttiniMerge) validateAddChoiceParameters(condition awsstepfun
 	return nil
 }
 
-func (a *jsiiProxy_AttiniMerge) validateAddIteratorParameters(iteration awsstepfunctions.StateGraph) error {
+func (a *jsiiProxy_AttiniTask) validateAddIteratorParameters(iteration awsstepfunctions.StateGraph) error {
 	if iteration == nil {
 		return fmt.Errorf("parameter iteration is required, but nil was provided")
 	}
@@ -40,7 +40,7 @@ func (a *jsiiProxy_AttiniMerge) validateAddIteratorParameters(iteration awsstepf
 	return nil
 }
 
-func (a *jsiiProxy_AttiniMerge) validateAddPrefixParameters(x *string) error {
+func (a *jsiiProxy_AttiniTask) validateAddPrefixParameters(x *string) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -48,7 +48,7 @@ func (a *jsiiProxy_AttiniMerge) validateAddPrefixParameters(x *string) error {
 	return nil
 }
 
-func (a *jsiiProxy_AttiniMerge) validateBindToGraphParameters(graph awsstepfunctions.StateGraph) error {
+func (a *jsiiProxy_AttiniTask) validateBindToGraphParameters(graph awsstepfunctions.StateGraph) error {
 	if graph == nil {
 		return fmt.Errorf("parameter graph is required, but nil was provided")
 	}
@@ -56,7 +56,7 @@ func (a *jsiiProxy_AttiniMerge) validateBindToGraphParameters(graph awsstepfunct
 	return nil
 }
 
-func (a *jsiiProxy_AttiniMerge) validateMakeDefaultParameters(def awsstepfunctions.State) error {
+func (a *jsiiProxy_AttiniTask) validateMakeDefaultParameters(def awsstepfunctions.State) error {
 	if def == nil {
 		return fmt.Errorf("parameter def is required, but nil was provided")
 	}
@@ -64,7 +64,7 @@ func (a *jsiiProxy_AttiniMerge) validateMakeDefaultParameters(def awsstepfunctio
 	return nil
 }
 
-func (a *jsiiProxy_AttiniMerge) validateMakeNextParameters(next awsstepfunctions.State) error {
+func (a *jsiiProxy_AttiniTask) validateMakeNextParameters(next awsstepfunctions.State) error {
 	if next == nil {
 		return fmt.Errorf("parameter next is required, but nil was provided")
 	}
@@ -72,7 +72,7 @@ func (a *jsiiProxy_AttiniMerge) validateMakeNextParameters(next awsstepfunctions
 	return nil
 }
 
-func (a *jsiiProxy_AttiniMerge) validateNextParameters(next awsstepfunctions.IChainable) error {
+func (a *jsiiProxy_AttiniTask) validateNextParameters(next awsstepfunctions.IChainable) error {
 	if next == nil {
 		return fmt.Errorf("parameter next is required, but nil was provided")
 	}
@@ -80,7 +80,7 @@ func (a *jsiiProxy_AttiniMerge) validateNextParameters(next awsstepfunctions.ICh
 	return nil
 }
 
-func (a *jsiiProxy_AttiniMerge) validateWhenBoundToGraphParameters(graph awsstepfunctions.StateGraph) error {
+func (a *jsiiProxy_AttiniTask) validateWhenBoundToGraphParameters(graph awsstepfunctions.StateGraph) error {
 	if graph == nil {
 		return fmt.Errorf("parameter graph is required, but nil was provided")
 	}
@@ -88,7 +88,7 @@ func (a *jsiiProxy_AttiniMerge) validateWhenBoundToGraphParameters(graph awsstep
 	return nil
 }
 
-func validateAttiniMerge_FilterNextablesParameters(states *[]awsstepfunctions.State) error {
+func validateAttiniTask_FilterNextablesParameters(states *[]awsstepfunctions.State) error {
 	if states == nil {
 		return fmt.Errorf("parameter states is required, but nil was provided")
 	}
@@ -96,7 +96,7 @@ func validateAttiniMerge_FilterNextablesParameters(states *[]awsstepfunctions.St
 	return nil
 }
 
-func validateAttiniMerge_FindReachableEndStatesParameters(start awsstepfunctions.State, options *awsstepfunctions.FindStateOptions) error {
+func validateAttiniTask_FindReachableEndStatesParameters(start awsstepfunctions.State, options *awsstepfunctions.FindStateOptions) error {
 	if start == nil {
 		return fmt.Errorf("parameter start is required, but nil was provided")
 	}
@@ -108,7 +108,7 @@ func validateAttiniMerge_FindReachableEndStatesParameters(start awsstepfunctions
 	return nil
 }
 
-func validateAttiniMerge_FindReachableStatesParameters(start awsstepfunctions.State, options *awsstepfunctions.FindStateOptions) error {
+func validateAttiniTask_FindReachableStatesParameters(start awsstepfunctions.State, options *awsstepfunctions.FindStateOptions) error {
 	if start == nil {
 		return fmt.Errorf("parameter start is required, but nil was provided")
 	}
@@ -120,7 +120,7 @@ func validateAttiniMerge_FindReachableStatesParameters(start awsstepfunctions.St
 	return nil
 }
 
-func validateAttiniMerge_IsConstructParameters(x interface{}) error {
+func validateAttiniTask_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -128,7 +128,7 @@ func validateAttiniMerge_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateAttiniMerge_PrefixStatesParameters(root constructs.IConstruct, prefix *string) error {
+func validateAttiniTask_PrefixStatesParameters(root constructs.IConstruct, prefix *string) error {
 	if root == nil {
 		return fmt.Errorf("parameter root is required, but nil was provided")
 	}
@@ -140,7 +140,7 @@ func validateAttiniMerge_PrefixStatesParameters(root constructs.IConstruct, pref
 	return nil
 }
 
-func (j *jsiiProxy_AttiniMerge) validateSetTypeParameters(val *string) error {
+func (j *jsiiProxy_AttiniTask) validateSetTypeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -148,7 +148,7 @@ func (j *jsiiProxy_AttiniMerge) validateSetTypeParameters(val *string) error {
 	return nil
 }
 
-func validateNewAttiniMergeParameters(scope constructs.Construct, id *string) error {
+func validateNewAttiniTaskParameters(scope constructs.Construct, id *string) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}

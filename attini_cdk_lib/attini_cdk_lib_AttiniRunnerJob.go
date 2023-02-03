@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (
@@ -10,7 +10,7 @@ import (
 )
 
 type AttiniRunnerJob interface {
-	AttiniState
+	AttiniTask
 	Branches() *[]awsstepfunctions.StateGraph
 	Comment() *string
 	DefaultChoice() awsstepfunctions.State
@@ -47,6 +47,12 @@ type AttiniRunnerJob interface {
 	// Don't call this. It will be called automatically when you work
 	// with states normally.
 	BindToGraph(graph awsstepfunctions.StateGraph)
+	// Get the json path to this steps output.
+	//
+	// Convenience
+	// method that will return a string with the following format
+	// $.output.<id>.<path>.
+	GetOutputPath(path *string) *string
 	// Make the indicated state the default choice transition of this state.
 	MakeDefault(def awsstepfunctions.State)
 	// Make the indicated state the default transition of this state.
@@ -82,7 +88,7 @@ type AttiniRunnerJob interface {
 
 // The jsii proxy struct for AttiniRunnerJob
 type jsiiProxy_AttiniRunnerJob struct {
-	jsiiProxy_AttiniState
+	jsiiProxy_AttiniTask
 }
 
 func (j *jsiiProxy_AttiniRunnerJob) Branches() *[]awsstepfunctions.StateGraph {
@@ -245,7 +251,7 @@ func NewAttiniRunnerJob(scope constructs.Construct, id *string, props *AttiniRun
 	j := jsiiProxy_AttiniRunnerJob{}
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniRunnerJob",
+		"@attini/cdk.AttiniRunnerJob",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -257,7 +263,7 @@ func NewAttiniRunnerJob_Override(a AttiniRunnerJob, scope constructs.Construct, 
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniRunnerJob",
+		"@attini/cdk.AttiniRunnerJob",
 		[]interface{}{scope, id, props},
 		a,
 	)
@@ -300,7 +306,7 @@ func AttiniRunnerJob_FilterNextables(states *[]awsstepfunctions.State) *[]awsste
 	var returns *[]awsstepfunctions.INextable
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniRunnerJob",
+		"@attini/cdk.AttiniRunnerJob",
 		"filterNextables",
 		[]interface{}{states},
 		&returns,
@@ -319,7 +325,7 @@ func AttiniRunnerJob_FindReachableEndStates(start awsstepfunctions.State, option
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniRunnerJob",
+		"@attini/cdk.AttiniRunnerJob",
 		"findReachableEndStates",
 		[]interface{}{start, options},
 		&returns,
@@ -340,7 +346,7 @@ func AttiniRunnerJob_FindReachableStates(start awsstepfunctions.State, options *
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniRunnerJob",
+		"@attini/cdk.AttiniRunnerJob",
 		"findReachableStates",
 		[]interface{}{start, options},
 		&returns,
@@ -362,7 +368,7 @@ func AttiniRunnerJob_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniRunnerJob",
+		"@attini/cdk.AttiniRunnerJob",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -379,7 +385,7 @@ func AttiniRunnerJob_PrefixStates(root constructs.IConstruct, prefix *string) {
 		panic(err)
 	}
 	_jsii_.StaticInvokeVoid(
-		"attini-cdk-lib.AttiniRunnerJob",
+		"@attini/cdk.AttiniRunnerJob",
 		"prefixStates",
 		[]interface{}{root, prefix},
 	)
@@ -438,6 +444,19 @@ func (a *jsiiProxy_AttiniRunnerJob) BindToGraph(graph awsstepfunctions.StateGrap
 		"bindToGraph",
 		[]interface{}{graph},
 	)
+}
+
+func (a *jsiiProxy_AttiniRunnerJob) GetOutputPath(path *string) *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		a,
+		"getOutputPath",
+		[]interface{}{path},
+		&returns,
+	)
+
+	return returns
 }
 
 func (a *jsiiProxy_AttiniRunnerJob) MakeDefault(def awsstepfunctions.State) {

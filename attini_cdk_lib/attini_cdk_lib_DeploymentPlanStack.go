@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (
@@ -495,7 +495,7 @@ func NewDeploymentPlanStack(scope constructs.Construct, id *string, props *awscd
 	j := jsiiProxy_DeploymentPlanStack{}
 
 	_jsii_.Create(
-		"attini-cdk-lib.DeploymentPlanStack",
+		"@attini/cdk.DeploymentPlanStack",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -507,7 +507,7 @@ func NewDeploymentPlanStack_Override(d DeploymentPlanStack, scope constructs.Con
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"attini-cdk-lib.DeploymentPlanStack",
+		"@attini/cdk.DeploymentPlanStack",
 		[]interface{}{scope, id, props},
 		d,
 	)
@@ -526,7 +526,7 @@ func DeploymentPlanStack_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.DeploymentPlanStack",
+		"@attini/cdk.DeploymentPlanStack",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -547,7 +547,7 @@ func DeploymentPlanStack_IsStack(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.DeploymentPlanStack",
+		"@attini/cdk.DeploymentPlanStack",
 		"isStack",
 		[]interface{}{x},
 		&returns,
@@ -568,7 +568,7 @@ func DeploymentPlanStack_Of(construct constructs.IConstruct) awscdk.Stack {
 	var returns awscdk.Stack
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.DeploymentPlanStack",
+		"@attini/cdk.DeploymentPlanStack",
 		"of",
 		[]interface{}{construct},
 		&returns,

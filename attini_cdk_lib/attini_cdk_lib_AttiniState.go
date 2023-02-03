@@ -1,4 +1,4 @@
-// Attini resources
+// Attini CDK Constructs
 package attini_cdk_lib
 
 import (
@@ -245,7 +245,7 @@ func NewAttiniState_Override(a AttiniState, scope constructs.Construct, id *stri
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"attini-cdk-lib.AttiniState",
+		"@attini/cdk.AttiniState",
 		[]interface{}{scope, id},
 		a,
 	)
@@ -288,7 +288,7 @@ func AttiniState_FilterNextables(states *[]awsstepfunctions.State) *[]awsstepfun
 	var returns *[]awsstepfunctions.INextable
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniState",
+		"@attini/cdk.AttiniState",
 		"filterNextables",
 		[]interface{}{states},
 		&returns,
@@ -307,7 +307,7 @@ func AttiniState_FindReachableEndStates(start awsstepfunctions.State, options *a
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniState",
+		"@attini/cdk.AttiniState",
 		"findReachableEndStates",
 		[]interface{}{start, options},
 		&returns,
@@ -328,7 +328,7 @@ func AttiniState_FindReachableStates(start awsstepfunctions.State, options *awss
 	var returns *[]awsstepfunctions.State
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniState",
+		"@attini/cdk.AttiniState",
 		"findReachableStates",
 		[]interface{}{start, options},
 		&returns,
@@ -350,7 +350,7 @@ func AttiniState_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"attini-cdk-lib.AttiniState",
+		"@attini/cdk.AttiniState",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -367,7 +367,7 @@ func AttiniState_PrefixStates(root constructs.IConstruct, prefix *string) {
 		panic(err)
 	}
 	_jsii_.StaticInvokeVoid(
-		"attini-cdk-lib.AttiniState",
+		"@attini/cdk.AttiniState",
 		"prefixStates",
 		[]interface{}{root, prefix},
 	)
