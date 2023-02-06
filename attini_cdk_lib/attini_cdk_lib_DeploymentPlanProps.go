@@ -6,6 +6,6 @@ import (
 )
 
 type DeploymentPlanProps struct {
-	Definition awsstepfunctions.Chain `field:"required" json:"definition" yaml:"definition"`
+	Definition awsstepfunctions.IChainable `field:"required" json:"definition" yaml:"definition"`
 }
 
