@@ -35,7 +35,7 @@ type AttiniRunnerProps struct {
 	Startup *Startup `field:"optional" json:"startup" yaml:"startup"`
 	// Fargate ECS task definition that the Attini Runner should use.
 	//
-	// If omitted the Attini will use its default task definition.
+	// If omitted then Attini will use its default task definition.
 	TaskDefinitionArn *string `field:"optional" json:"taskDefinitionArn" yaml:"taskDefinitionArn"`
 }
 

@@ -13,6 +13,9 @@ type AttiniRunner interface {
 	constructs.Construct
 	// The tree node.
 	Node() constructs.Node
+	// Returns a reference to the runner that can be used by the {@link AttiniRunnerJob} step.
+	//
+	// Pass it to {@link AttiniRunnerJobProps.runner}.
 	RunnerName() *string
 	// Returns a string representation of this construct.
 	ToString() *string

@@ -9,6 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// The AttiniRunnerJob is a quick and cost-efficient way to run shell commands using a container.
 type AttiniRunnerJob interface {
 	AttiniTask
 	Branches() *[]awsstepfunctions.StateGraph
