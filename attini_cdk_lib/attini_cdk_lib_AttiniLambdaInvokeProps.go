@@ -13,6 +13,8 @@ type AttiniLambdaInvokeProps struct {
 	// Invocation type of the Lambda function.
 	InvocationType awsstepfunctionstasks.LambdaInvocationType `field:"optional" json:"invocationType" yaml:"invocationType"`
 	// The JSON that will be supplied as input to the Lambda function.
+	//
+	// If not specified then the entire payload will be passed.
 	Payload *map[string]interface{} `field:"optional" json:"payload" yaml:"payload"`
 	// Version or alias to invoke a published version of the function.
 	Qualifier *string `field:"optional" json:"qualifier" yaml:"qualifier"`

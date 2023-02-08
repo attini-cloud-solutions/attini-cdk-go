@@ -9,6 +9,9 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// Some AWS StepFunction types return a list instead of an object, for example Parallel or Map.
+//
+// To make the payload easier to work with, the merge step can merge all the data in the list into one object.
 type AttiniMerge interface {
 	AttiniState
 	Branches() *[]awsstepfunctions.StateGraph

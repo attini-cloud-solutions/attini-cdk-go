@@ -471,6 +471,14 @@ func init() {
 		"@attini/cdk.AwsVpcConfiguration",
 		reflect.TypeOf((*AwsVpcConfiguration)(nil)).Elem(),
 	)
+	_jsii_.RegisterEnum(
+		"@attini/cdk.CfnAction",
+		reflect.TypeOf((*CfnAction)(nil)).Elem(),
+		map[string]interface{}{
+			"DEPLOY": CfnAction_DEPLOY,
+			"DELETE": CfnAction_DELETE,
+		},
+	)
 	_jsii_.RegisterClass(
 		"@attini/cdk.DeploymentPlan",
 		reflect.TypeOf((*DeploymentPlan)(nil)).Elem(),

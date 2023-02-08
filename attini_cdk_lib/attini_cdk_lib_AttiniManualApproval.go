@@ -9,6 +9,9 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// The manual approval step will pause the deployment plan and wait for confirmation before continuing.
+//
+// The deployment can be resumed by running the "attini deploy continue" command with the Attini CLI.
 type AttiniManualApproval interface {
 	AttiniTask
 	Branches() *[]awsstepfunctions.StateGraph

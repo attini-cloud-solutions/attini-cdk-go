@@ -9,6 +9,11 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// The Attini import step can be used for importing data from different sources.
+//
+// A common use case for this type is reading data from the output of another distribution.
+// For example, you could have a distribution responsible for setting up a network that exposes a VPC-id.
+// Then the VPC-id can be imported by other deployment plans.
 type AttiniImport interface {
 	AttiniTask
 	Branches() *[]awsstepfunctions.StateGraph

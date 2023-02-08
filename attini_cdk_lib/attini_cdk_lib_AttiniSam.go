@@ -9,6 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A step for deploying an AWS SAM Project.
 type AttiniSam interface {
 	AttiniTask
 	Branches() *[]awsstepfunctions.StateGraph

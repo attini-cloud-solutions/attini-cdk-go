@@ -9,6 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// AttiniLambdaInvoke will call a Lambda function while preserving the payload for subsequent steps.
 type AttiniLambdaInvoke interface {
 	AttiniState
 	Branches() *[]awsstepfunctions.StateGraph
