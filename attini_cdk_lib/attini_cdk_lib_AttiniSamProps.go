@@ -13,7 +13,7 @@ type AttiniSamProps struct {
 	Action CfnAction `field:"optional" json:"action" yaml:"action"`
 	// Specifies a path to a configuration file for the stack.
 	//
-	// For more information, see the {@link https://acc.docs.attini.io/api-reference/cloudformation-configuration.html#api-reference-cloudformation-configuration documentation}
+	// For more information, see the {@link https://docs.attini.io/api-reference/cloudformation-configuration.html#api-reference-cloudformation-configuration documentation}
 	ConfigFile *string `field:"optional" json:"configFile" yaml:"configFile"`
 	// Specify if termination protection should be enabled for the stack.
 	//
@@ -28,7 +28,7 @@ type AttiniSamProps struct {
 	ExecutionRoleArn *string `field:"optional" json:"executionRoleArn" yaml:"executionRoleArn"`
 	// The parameters for the stack.
 	//
-	// For more information, see the {@link https://acc.docs.attini.io/api-reference/cloudformation-configuration.html#api-reference-cloudformation-configuration documentation}
+	// For more information, see the {@link https://docs.attini.io/api-reference/cloudformation-configuration.html#api-reference-cloudformation-configuration documentation}
 	Parameters *map[string]*string `field:"optional" json:"parameters" yaml:"parameters"`
 	// The arn of the StackRole, find more info here: {@link https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-servicerole.html AWS CloudFormation service role}.
 	StackRoleArn *string `field:"optional" json:"stackRoleArn" yaml:"stackRoleArn"`

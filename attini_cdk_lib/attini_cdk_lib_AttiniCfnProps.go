@@ -7,7 +7,7 @@ type AttiniCfnProps struct {
 	Action CfnAction `field:"optional" json:"action" yaml:"action"`
 	// Specifies a path to a configuration file for the stack.
 	//
-	// For more information, see the {@link https://acc.docs.attini.io/api-reference/cloudformation-configuration.html#api-reference-cloudformation-configuration documentation}
+	// For more information, see the {@link https://docs.attini.io/api-reference/cloudformation-configuration.html#api-reference-cloudformation-configuration documentation}
 	ConfigFile *string `field:"optional" json:"configFile" yaml:"configFile"`
 	// Specify if termination protection should be enabled for the stack.
 	//
