@@ -9,6 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// The AttiniCfn step can create, update or delete a CloudFormation stack.
 type AttiniCfn interface {
 	AttiniTask
 	Branches() *[]awsstepfunctions.StateGraph
