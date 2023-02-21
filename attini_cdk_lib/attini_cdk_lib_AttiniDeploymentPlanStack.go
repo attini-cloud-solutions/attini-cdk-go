@@ -11,7 +11,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-type DeploymentPlanStack interface {
+type AttiniDeploymentPlanStack interface {
 	awscdk.Stack
 	// The AWS account into which this stack will be deployed.
 	//
@@ -280,12 +280,12 @@ type DeploymentPlanStack interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for DeploymentPlanStack
-type jsiiProxy_DeploymentPlanStack struct {
+// The jsii proxy struct for AttiniDeploymentPlanStack
+type jsiiProxy_AttiniDeploymentPlanStack struct {
 	internal.Type__awscdkStack
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Account() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Account() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -295,7 +295,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Account() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) ArtifactId() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) ArtifactId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -305,7 +305,7 @@ func (j *jsiiProxy_DeploymentPlanStack) ArtifactId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) AvailabilityZones() *[]*string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) AvailabilityZones() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -315,7 +315,7 @@ func (j *jsiiProxy_DeploymentPlanStack) AvailabilityZones() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Dependencies() *[]awscdk.Stack {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Dependencies() *[]awscdk.Stack {
 	var returns *[]awscdk.Stack
 	_jsii_.Get(
 		j,
@@ -325,7 +325,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Dependencies() *[]awscdk.Stack {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Environment() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Environment() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -335,7 +335,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Environment() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Nested() *bool {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Nested() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -345,7 +345,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Nested() *bool {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) NestedStackParent() awscdk.Stack {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) NestedStackParent() awscdk.Stack {
 	var returns awscdk.Stack
 	_jsii_.Get(
 		j,
@@ -355,7 +355,7 @@ func (j *jsiiProxy_DeploymentPlanStack) NestedStackParent() awscdk.Stack {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) NestedStackResource() awscdk.CfnResource {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) NestedStackResource() awscdk.CfnResource {
 	var returns awscdk.CfnResource
 	_jsii_.Get(
 		j,
@@ -365,7 +365,7 @@ func (j *jsiiProxy_DeploymentPlanStack) NestedStackResource() awscdk.CfnResource
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Node() constructs.Node {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -375,7 +375,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) NotificationArns() *[]*string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) NotificationArns() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -385,7 +385,7 @@ func (j *jsiiProxy_DeploymentPlanStack) NotificationArns() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Partition() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Partition() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -395,7 +395,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Partition() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Region() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Region() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -405,7 +405,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Region() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) StackId() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) StackId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -415,7 +415,7 @@ func (j *jsiiProxy_DeploymentPlanStack) StackId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) StackName() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) StackName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -425,7 +425,7 @@ func (j *jsiiProxy_DeploymentPlanStack) StackName() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Synthesizer() awscdk.IStackSynthesizer {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Synthesizer() awscdk.IStackSynthesizer {
 	var returns awscdk.IStackSynthesizer
 	_jsii_.Get(
 		j,
@@ -435,7 +435,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Synthesizer() awscdk.IStackSynthesizer {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) Tags() awscdk.TagManager {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) Tags() awscdk.TagManager {
 	var returns awscdk.TagManager
 	_jsii_.Get(
 		j,
@@ -445,7 +445,7 @@ func (j *jsiiProxy_DeploymentPlanStack) Tags() awscdk.TagManager {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) TemplateFile() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) TemplateFile() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -455,7 +455,7 @@ func (j *jsiiProxy_DeploymentPlanStack) TemplateFile() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) TemplateOptions() awscdk.ITemplateOptions {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) TemplateOptions() awscdk.ITemplateOptions {
 	var returns awscdk.ITemplateOptions
 	_jsii_.Get(
 		j,
@@ -465,7 +465,7 @@ func (j *jsiiProxy_DeploymentPlanStack) TemplateOptions() awscdk.ITemplateOption
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) TerminationProtection() *bool {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) TerminationProtection() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -475,7 +475,7 @@ func (j *jsiiProxy_DeploymentPlanStack) TerminationProtection() *bool {
 	return returns
 }
 
-func (j *jsiiProxy_DeploymentPlanStack) UrlSuffix() *string {
+func (j *jsiiProxy_AttiniDeploymentPlanStack) UrlSuffix() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -486,30 +486,13 @@ func (j *jsiiProxy_DeploymentPlanStack) UrlSuffix() *string {
 }
 
 
-func NewDeploymentPlanStack(scope constructs.Construct, id *string, props *awscdk.StackProps) DeploymentPlanStack {
-	_init_.Initialize()
-
-	if err := validateNewDeploymentPlanStackParameters(scope, id, props); err != nil {
-		panic(err)
-	}
-	j := jsiiProxy_DeploymentPlanStack{}
-
-	_jsii_.Create(
-		"@attini/cdk.DeploymentPlanStack",
-		[]interface{}{scope, id, props},
-		&j,
-	)
-
-	return &j
-}
-
-func NewDeploymentPlanStack_Override(d DeploymentPlanStack, scope constructs.Construct, id *string, props *awscdk.StackProps) {
+func NewAttiniDeploymentPlanStack_Override(a AttiniDeploymentPlanStack, scope constructs.Construct, id *string, props *awscdk.StackProps) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@attini/cdk.DeploymentPlanStack",
+		"@attini/cdk.AttiniDeploymentPlanStack",
 		[]interface{}{scope, id, props},
-		d,
+		a,
 	)
 }
 
@@ -517,16 +500,16 @@ func NewDeploymentPlanStack_Override(d DeploymentPlanStack, scope constructs.Con
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Deprecated: use `x instanceof Construct` instead.
-func DeploymentPlanStack_IsConstruct(x interface{}) *bool {
+func AttiniDeploymentPlanStack_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateDeploymentPlanStack_IsConstructParameters(x); err != nil {
+	if err := validateAttiniDeploymentPlanStack_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@attini/cdk.DeploymentPlanStack",
+		"@attini/cdk.AttiniDeploymentPlanStack",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -538,16 +521,16 @@ func DeploymentPlanStack_IsConstruct(x interface{}) *bool {
 // Return whether the given object is a Stack.
 //
 // We do attribute detection since we can't reliably use 'instanceof'.
-func DeploymentPlanStack_IsStack(x interface{}) *bool {
+func AttiniDeploymentPlanStack_IsStack(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateDeploymentPlanStack_IsStackParameters(x); err != nil {
+	if err := validateAttiniDeploymentPlanStack_IsStackParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@attini/cdk.DeploymentPlanStack",
+		"@attini/cdk.AttiniDeploymentPlanStack",
 		"isStack",
 		[]interface{}{x},
 		&returns,
@@ -559,16 +542,16 @@ func DeploymentPlanStack_IsStack(x interface{}) *bool {
 // Looks up the first stack scope in which `construct` is defined.
 //
 // Fails if there is no stack up the tree.
-func DeploymentPlanStack_Of(construct constructs.IConstruct) awscdk.Stack {
+func AttiniDeploymentPlanStack_Of(construct constructs.IConstruct) awscdk.Stack {
 	_init_.Initialize()
 
-	if err := validateDeploymentPlanStack_OfParameters(construct); err != nil {
+	if err := validateAttiniDeploymentPlanStack_OfParameters(construct); err != nil {
 		panic(err)
 	}
 	var returns awscdk.Stack
 
 	_jsii_.StaticInvoke(
-		"@attini/cdk.DeploymentPlanStack",
+		"@attini/cdk.AttiniDeploymentPlanStack",
 		"of",
 		[]interface{}{construct},
 		&returns,
@@ -577,36 +560,36 @@ func DeploymentPlanStack_Of(construct constructs.IConstruct) awscdk.Stack {
 	return returns
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) AddDependency(target awscdk.Stack, reason *string) {
-	if err := d.validateAddDependencyParameters(target); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) AddDependency(target awscdk.Stack, reason *string) {
+	if err := a.validateAddDependencyParameters(target); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		a,
 		"addDependency",
 		[]interface{}{target, reason},
 	)
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) AddTransform(transform *string) {
-	if err := d.validateAddTransformParameters(transform); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) AddTransform(transform *string) {
+	if err := a.validateAddTransformParameters(transform); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		a,
 		"addTransform",
 		[]interface{}{transform},
 	)
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) AllocateLogicalId(cfnElement awscdk.CfnElement) *string {
-	if err := d.validateAllocateLogicalIdParameters(cfnElement); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) AllocateLogicalId(cfnElement awscdk.CfnElement) *string {
+	if err := a.validateAllocateLogicalIdParameters(cfnElement); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		a,
 		"allocateLogicalId",
 		[]interface{}{cfnElement},
 		&returns,
@@ -615,14 +598,14 @@ func (d *jsiiProxy_DeploymentPlanStack) AllocateLogicalId(cfnElement awscdk.CfnE
 	return returns
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) ExportValue(exportedValue interface{}, options *awscdk.ExportValueOptions) *string {
-	if err := d.validateExportValueParameters(exportedValue, options); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) ExportValue(exportedValue interface{}, options *awscdk.ExportValueOptions) *string {
+	if err := a.validateExportValueParameters(exportedValue, options); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		a,
 		"exportValue",
 		[]interface{}{exportedValue, options},
 		&returns,
@@ -631,14 +614,14 @@ func (d *jsiiProxy_DeploymentPlanStack) ExportValue(exportedValue interface{}, o
 	return returns
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) FormatArn(components *awscdk.ArnComponents) *string {
-	if err := d.validateFormatArnParameters(components); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) FormatArn(components *awscdk.ArnComponents) *string {
+	if err := a.validateFormatArnParameters(components); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		a,
 		"formatArn",
 		[]interface{}{components},
 		&returns,
@@ -647,14 +630,14 @@ func (d *jsiiProxy_DeploymentPlanStack) FormatArn(components *awscdk.ArnComponen
 	return returns
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) GetLogicalId(element awscdk.CfnElement) *string {
-	if err := d.validateGetLogicalIdParameters(element); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) GetLogicalId(element awscdk.CfnElement) *string {
+	if err := a.validateGetLogicalIdParameters(element); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		a,
 		"getLogicalId",
 		[]interface{}{element},
 		&returns,
@@ -663,36 +646,36 @@ func (d *jsiiProxy_DeploymentPlanStack) GetLogicalId(element awscdk.CfnElement) 
 	return returns
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) RenameLogicalId(oldId *string, newId *string) {
-	if err := d.validateRenameLogicalIdParameters(oldId, newId); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) RenameLogicalId(oldId *string, newId *string) {
+	if err := a.validateRenameLogicalIdParameters(oldId, newId); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		a,
 		"renameLogicalId",
 		[]interface{}{oldId, newId},
 	)
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) ReportMissingContextKey(report *cloudassemblyschema.MissingContext) {
-	if err := d.validateReportMissingContextKeyParameters(report); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) ReportMissingContextKey(report *cloudassemblyschema.MissingContext) {
+	if err := a.validateReportMissingContextKeyParameters(report); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		a,
 		"reportMissingContextKey",
 		[]interface{}{report},
 	)
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) Resolve(obj interface{}) interface{} {
-	if err := d.validateResolveParameters(obj); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) Resolve(obj interface{}) interface{} {
+	if err := a.validateResolveParameters(obj); err != nil {
 		panic(err)
 	}
 	var returns interface{}
 
 	_jsii_.Invoke(
-		d,
+		a,
 		"resolve",
 		[]interface{}{obj},
 		&returns,
@@ -701,14 +684,14 @@ func (d *jsiiProxy_DeploymentPlanStack) Resolve(obj interface{}) interface{} {
 	return returns
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) SplitArn(arn *string, arnFormat awscdk.ArnFormat) *awscdk.ArnComponents {
-	if err := d.validateSplitArnParameters(arn, arnFormat); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) SplitArn(arn *string, arnFormat awscdk.ArnFormat) *awscdk.ArnComponents {
+	if err := a.validateSplitArnParameters(arn, arnFormat); err != nil {
 		panic(err)
 	}
 	var returns *awscdk.ArnComponents
 
 	_jsii_.Invoke(
-		d,
+		a,
 		"splitArn",
 		[]interface{}{arn, arnFormat},
 		&returns,
@@ -717,14 +700,14 @@ func (d *jsiiProxy_DeploymentPlanStack) SplitArn(arn *string, arnFormat awscdk.A
 	return returns
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) ToJsonString(obj interface{}, space *float64) *string {
-	if err := d.validateToJsonStringParameters(obj); err != nil {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) ToJsonString(obj interface{}, space *float64) *string {
+	if err := a.validateToJsonStringParameters(obj); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		a,
 		"toJsonString",
 		[]interface{}{obj, space},
 		&returns,
@@ -733,11 +716,11 @@ func (d *jsiiProxy_DeploymentPlanStack) ToJsonString(obj interface{}, space *flo
 	return returns
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) ToString() *string {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		a,
 		"toString",
 		nil, // no parameters
 		&returns,

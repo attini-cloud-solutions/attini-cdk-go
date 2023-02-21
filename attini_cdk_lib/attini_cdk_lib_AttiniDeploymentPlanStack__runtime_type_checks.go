@@ -13,7 +13,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
-func (d *jsiiProxy_DeploymentPlanStack) validateAddDependencyParameters(target awscdk.Stack) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateAddDependencyParameters(target awscdk.Stack) error {
 	if target == nil {
 		return fmt.Errorf("parameter target is required, but nil was provided")
 	}
@@ -21,7 +21,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateAddDependencyParameters(target a
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateAddTransformParameters(transform *string) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateAddTransformParameters(transform *string) error {
 	if transform == nil {
 		return fmt.Errorf("parameter transform is required, but nil was provided")
 	}
@@ -29,7 +29,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateAddTransformParameters(transform
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateAllocateLogicalIdParameters(cfnElement awscdk.CfnElement) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateAllocateLogicalIdParameters(cfnElement awscdk.CfnElement) error {
 	if cfnElement == nil {
 		return fmt.Errorf("parameter cfnElement is required, but nil was provided")
 	}
@@ -37,7 +37,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateAllocateLogicalIdParameters(cfnE
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateExportValueParameters(exportedValue interface{}, options *awscdk.ExportValueOptions) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateExportValueParameters(exportedValue interface{}, options *awscdk.ExportValueOptions) error {
 	if exportedValue == nil {
 		return fmt.Errorf("parameter exportedValue is required, but nil was provided")
 	}
@@ -49,7 +49,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateExportValueParameters(exportedVa
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateFormatArnParameters(components *awscdk.ArnComponents) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateFormatArnParameters(components *awscdk.ArnComponents) error {
 	if components == nil {
 		return fmt.Errorf("parameter components is required, but nil was provided")
 	}
@@ -60,7 +60,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateFormatArnParameters(components *
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateGetLogicalIdParameters(element awscdk.CfnElement) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateGetLogicalIdParameters(element awscdk.CfnElement) error {
 	if element == nil {
 		return fmt.Errorf("parameter element is required, but nil was provided")
 	}
@@ -68,7 +68,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateGetLogicalIdParameters(element a
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateRenameLogicalIdParameters(oldId *string, newId *string) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateRenameLogicalIdParameters(oldId *string, newId *string) error {
 	if oldId == nil {
 		return fmt.Errorf("parameter oldId is required, but nil was provided")
 	}
@@ -80,7 +80,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateRenameLogicalIdParameters(oldId 
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateReportMissingContextKeyParameters(report *cloudassemblyschema.MissingContext) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateReportMissingContextKeyParameters(report *cloudassemblyschema.MissingContext) error {
 	if report == nil {
 		return fmt.Errorf("parameter report is required, but nil was provided")
 	}
@@ -91,7 +91,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateReportMissingContextKeyParameter
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateResolveParameters(obj interface{}) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateResolveParameters(obj interface{}) error {
 	if obj == nil {
 		return fmt.Errorf("parameter obj is required, but nil was provided")
 	}
@@ -99,7 +99,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateResolveParameters(obj interface{
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateSplitArnParameters(arn *string, arnFormat awscdk.ArnFormat) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateSplitArnParameters(arn *string, arnFormat awscdk.ArnFormat) error {
 	if arn == nil {
 		return fmt.Errorf("parameter arn is required, but nil was provided")
 	}
@@ -111,7 +111,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateSplitArnParameters(arn *string, 
 	return nil
 }
 
-func (d *jsiiProxy_DeploymentPlanStack) validateToJsonStringParameters(obj interface{}) error {
+func (a *jsiiProxy_AttiniDeploymentPlanStack) validateToJsonStringParameters(obj interface{}) error {
 	if obj == nil {
 		return fmt.Errorf("parameter obj is required, but nil was provided")
 	}
@@ -119,7 +119,7 @@ func (d *jsiiProxy_DeploymentPlanStack) validateToJsonStringParameters(obj inter
 	return nil
 }
 
-func validateDeploymentPlanStack_IsConstructParameters(x interface{}) error {
+func validateAttiniDeploymentPlanStack_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -127,7 +127,7 @@ func validateDeploymentPlanStack_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateDeploymentPlanStack_IsStackParameters(x interface{}) error {
+func validateAttiniDeploymentPlanStack_IsStackParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -135,7 +135,7 @@ func validateDeploymentPlanStack_IsStackParameters(x interface{}) error {
 	return nil
 }
 
-func validateDeploymentPlanStack_OfParameters(construct constructs.IConstruct) error {
+func validateAttiniDeploymentPlanStack_OfParameters(construct constructs.IConstruct) error {
 	if construct == nil {
 		return fmt.Errorf("parameter construct is required, but nil was provided")
 	}
@@ -143,7 +143,7 @@ func validateDeploymentPlanStack_OfParameters(construct constructs.IConstruct) e
 	return nil
 }
 
-func validateNewDeploymentPlanStackParameters(scope constructs.Construct, id *string, props *awscdk.StackProps) error {
+func validateNewAttiniDeploymentPlanStackParameters(scope constructs.Construct, id *string, props *awscdk.StackProps) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}
