@@ -52,8 +52,8 @@ type AttiniCfn interface {
 	//
 	// Convenience
 	// method that will return a string with the following format
-	// $.output.<id>.<path>.
-	GetOutputPath(path *string) *string
+	// $.output.<id>.<path>.<path>
+	GetOutputPath(paths ...*string) *string
 	// Make the indicated state the default choice transition of this state.
 	MakeDefault(def awsstepfunctions.State)
 	// Make the indicated state the default transition of this state.
@@ -447,13 +447,18 @@ func (a *jsiiProxy_AttiniCfn) BindToGraph(graph awsstepfunctions.StateGraph) {
 	)
 }
 
-func (a *jsiiProxy_AttiniCfn) GetOutputPath(path *string) *string {
+func (a *jsiiProxy_AttiniCfn) GetOutputPath(paths ...*string) *string {
+	args := []interface{}{}
+	for _, a := range paths {
+		args = append(args, a)
+	}
+
 	var returns *string
 
 	_jsii_.Invoke(
 		a,
 		"getOutputPath",
-		[]interface{}{path},
+		args,
 		&returns,
 	)
 
