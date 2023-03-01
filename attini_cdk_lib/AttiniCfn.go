@@ -48,6 +48,18 @@ type AttiniCfn interface {
 	// Don't call this. It will be called automatically when you work
 	// with states normally.
 	BindToGraph(graph awsstepfunctions.StateGraph)
+	// Get a string value from the steps output.
+	//
+	// This method can only be used as the value for a key/value pair in another Attini or
+	// StepFunction step.
+	//
+	// Example:
+	//   Invalid examples:
+	//
+	//   {my-key: 'test'+ step.getOutput()}
+	//   {my-key: '[step.getOutput()]}
+	//
+	GetOutput(paths ...*string) *string
 	// Get the json path to this steps output.
 	//
 	// Convenience
@@ -445,6 +457,24 @@ func (a *jsiiProxy_AttiniCfn) BindToGraph(graph awsstepfunctions.StateGraph) {
 		"bindToGraph",
 		[]interface{}{graph},
 	)
+}
+
+func (a *jsiiProxy_AttiniCfn) GetOutput(paths ...*string) *string {
+	args := []interface{}{}
+	for _, a := range paths {
+		args = append(args, a)
+	}
+
+	var returns *string
+
+	_jsii_.Invoke(
+		a,
+		"getOutput",
+		args,
+		&returns,
+	)
+
+	return returns
 }
 
 func (a *jsiiProxy_AttiniCfn) GetOutputPath(paths ...*string) *string {

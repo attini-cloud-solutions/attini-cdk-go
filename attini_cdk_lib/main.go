@@ -20,6 +20,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutput", GoMethod: "GetOutput"},
 			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
@@ -71,6 +72,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutput", GoMethod: "GetOutput"},
 			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
@@ -165,6 +167,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutput", GoMethod: "GetOutput"},
 			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
@@ -266,6 +269,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutput", GoMethod: "GetOutput"},
 			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
@@ -347,6 +351,14 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
+		"@attini/cdk.AttiniPayload",
+		reflect.TypeOf((*AttiniPayload)(nil)).Elem(),
+		nil, // no members
+		func() interface{} {
+			return &jsiiProxy_AttiniPayload{}
+		},
+	)
+	_jsii_.RegisterClass(
 		"@attini/cdk.AttiniRunner",
 		reflect.TypeOf((*AttiniRunner)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -373,6 +385,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutput", GoMethod: "GetOutput"},
 			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
@@ -416,6 +429,14 @@ func init() {
 		reflect.TypeOf((*AttiniRunnerProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@attini/cdk.AttiniRuntimeVariables",
+		reflect.TypeOf((*AttiniRuntimeVariables)(nil)).Elem(),
+		nil, // no members
+		func() interface{} {
+			return &jsiiProxy_AttiniRuntimeVariables{}
+		},
+	)
+	_jsii_.RegisterClass(
 		"@attini/cdk.AttiniSam",
 		reflect.TypeOf((*AttiniSam)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -428,6 +449,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutput", GoMethod: "GetOutput"},
 			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
@@ -527,6 +549,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "comment", GoGetter: "Comment"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultChoice", GoGetter: "DefaultChoice"},
 			_jsii_.MemberProperty{JsiiProperty: "endStates", GoGetter: "EndStates"},
+			_jsii_.MemberMethod{JsiiMethod: "getOutput", GoMethod: "GetOutput"},
 			_jsii_.MemberMethod{JsiiMethod: "getOutputPath", GoMethod: "GetOutputPath"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "inputPath", GoGetter: "InputPath"},
