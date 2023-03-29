@@ -12,6 +12,10 @@ import (
 // StepFunction step.
 //
 // Example:
+//   Valid example:
+//
+//   {my-key: AttiniPayload.environment()}
+//
 //   Invalid examples:
 //
 //   {my-key: 'test'+ AttiniPayload.environment()}
@@ -23,20 +27,6 @@ type AttiniPayload interface {
 // The jsii proxy struct for AttiniPayload
 type jsiiProxy_AttiniPayload struct {
 	_ byte // padding
-}
-
-func NewAttiniPayload() AttiniPayload {
-	_init_.Initialize()
-
-	j := jsiiProxy_AttiniPayload{}
-
-	_jsii_.Create(
-		"@attini/cdk.AttiniPayload",
-		nil, // no parameters
-		&j,
-	)
-
-	return &j
 }
 
 func NewAttiniPayload_Override(a AttiniPayload) {

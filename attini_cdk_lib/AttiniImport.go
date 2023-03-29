@@ -58,6 +58,11 @@ type AttiniImport interface {
 	// StepFunction step.
 	//
 	// Example:
+	//   Valid examples:
+	//
+	//   {my-key: step.getOutput()}
+	//   {my-key: step.getOutput('path','to','key')}
+	//
 	//   Invalid examples:
 	//
 	//   {my-key: 'test'+ step.getOutput()}
