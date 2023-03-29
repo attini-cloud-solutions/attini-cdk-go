@@ -13,6 +13,11 @@ type AttiniCdkProps struct {
 	BuildExclude *[]*string `field:"optional" json:"buildExclude" yaml:"buildExclude"`
 	// Passed to the CDK --context option.
 	Context *map[string]*string `field:"optional" json:"context" yaml:"context"`
+	// Configure if you want Attini to perform a diff check on the CDK app before any changes are applied.
+	//
+	// If there are any changes performed on the CDK app, then manual approval will be required before the changes
+	// are applied.
+	Diff *DiffProps `field:"optional" json:"diff" yaml:"diff"`
 	// Environment variables that will be set in the shell for the runner job.
 	Environment *map[string]*string `field:"optional" json:"environment" yaml:"environment"`
 	// Passed to the CDK --force option.

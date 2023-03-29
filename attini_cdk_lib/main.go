@@ -614,6 +614,10 @@ func init() {
 		reflect.TypeOf((*DeploymentPlanProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@attini/cdk.DiffProps",
+		reflect.TypeOf((*DiffProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@attini/cdk.DistributionSource",
 		reflect.TypeOf((*DistributionSource)(nil)).Elem(),
 	)
