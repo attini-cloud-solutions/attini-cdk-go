@@ -622,6 +622,10 @@ func init() {
 		reflect.TypeOf((*DistributionSource)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@attini/cdk.Ec2Configuration",
+		reflect.TypeOf((*Ec2Configuration)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@attini/cdk.Project",
 		reflect.TypeOf((*Project)(nil)).Elem(),
 	)

@@ -9,6 +9,11 @@ type AttiniRunnerProps struct {
 	//
 	// This is only required if a task definition with multiple containers is specified.
 	ContainerName *string `field:"optional" json:"containerName" yaml:"containerName"`
+	// Configures an EC2 instance to host the Runner ECS task.
+	//
+	// By default, Attini Runners use Fargate, but you can use EC2 instead.
+	// This is useful if you want to start a container from the ECS container, which is currently not possible with Fargate.
+	Ec2Configuration *Ec2Configuration `field:"optional" json:"ec2Configuration" yaml:"ec2Configuration"`
 	// The name of the ECS Cluster to use.
 	//
 	// This is not mandatory if there is a default cluster in the account.
@@ -35,7 +40,7 @@ type AttiniRunnerProps struct {
 	Startup *Startup `field:"optional" json:"startup" yaml:"startup"`
 	// Fargate ECS task definition that the Attini Runner should use.
 	//
-	// If omitted then Attini will use its default task definition.
+	// If omitted, then Attini will use its default task definition.
 	TaskDefinitionArn *string `field:"optional" json:"taskDefinitionArn" yaml:"taskDefinitionArn"`
 }
 
